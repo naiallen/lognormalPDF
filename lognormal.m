@@ -31,6 +31,7 @@ gaussian_dB = ( 1/(pdB.s*sqrt(2*pi)) )*exp(-0.5.*((y_dB - pdB.m)/pdB.s).^2);
 gaussian_watts = ( 1/(pwatts.s0 * sqrt(2*pi)) )*exp(-0.5.*((y_watts-pwatts.m0)/pwatts.s0).^2);
 
 %   Lognormal
+% lognormal_watts = lognpdf(y_watts, pwatts.m1, pwatts.s1);
 lognormal_watts = ( 1./(pwatts.s1 * sqrt(2*pi).*y_watts )).*exp(-0.5.*((log(y_watts)-pwatts.m1)/pwatts.s1).^2);
 %------------------------------------------------
 
